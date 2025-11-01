@@ -1,7 +1,6 @@
 "use client"
 
 import React, { createContext, useContext, useEffect, useState } from "react"
-import { toast } from "sonner"
 import { io, Socket } from "socket.io-client"
 import type { ConnectedClient, SocketActivity } from "../lib/types"
 
@@ -34,8 +33,8 @@ export const WebsiteSocketProvider: React.FC<{ children: React.ReactNode }> = ({
     }>({
         clients: []
     })
-    const [activityLog, setActivityLog] = useState<SocketActivity[]>([])
-    const [responseTime, setResponseTime] = useState<number | null>(null)
+    const [_activityLog, setActivityLog] = useState<SocketActivity[]>([])
+    const [_responseTime, setResponseTime] = useState<number | null>(null)
 
     const connectAsWebsite = () => {
         const payload = {

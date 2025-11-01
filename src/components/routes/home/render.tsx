@@ -7,8 +7,6 @@ import {
   Shield,
   Cloud,
   Zap,
-  Cpu,
-  MonitorSmartphone,
   ArrowRight,
   Calendar,
   GitBranch,
